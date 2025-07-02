@@ -130,14 +130,81 @@
     font-style: bold;
 }
 
-.contact-page{
-    background-color: rgb(255, 255, 0);
-    width: 100%;
-    height: 100vh;
-}
-
 .skills-page{
     background: radial-gradient(circle, #f7f7f7, #d7d7d7);
     width: 100%;
     height: 100vh;
 }
+
+.skills-page .div1{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.skills-page .div2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+.skills-page .div2 .wrapper{
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    column-gap: 200px;
+    row-gap: 100px;
+}
+
+.contact-page{
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 100vh;
+}
+
+.contact-page .div1{
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.contact-page .div2{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-page .div2 form input{
+    margin: 20px;
+    width: 500px;
+    height: 50px;
+    font-size: 15px;
+    color: #ffffff;
+    background: none;
+    border-style: none none solid solid;
+    border-color: #ff0000 #ff0000 #ffffff #ffffff;
+    padding-left: 10px;
+    border-width: 5px;
+    outline: none;
+}
+
+.contact-page .div2 form input:hover{
+    background-color: #ffffff;
+    color: #000000;
+
+}
+
+.contact-page .div2 form input::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 100%;
+}
+
+.contact-page .div2 form input:hover::placeholder{
+  color: rgb(0, 0, 0);
+  opacity: 100%;
+}
+
