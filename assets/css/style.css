@@ -1,209 +1,330 @@
 * { 
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.page-section{
+    min-height: 100vh;
+}
+
+.main-background{
+    background-image: url("/assets/img/fundo.svg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.gradient-background{
+    background: radial-gradient(circle, #f7f7f7, #d7d7d7);
+}
+
+.dark-gray-background{
+    background: #1A1A1A;
+}
+
+.dark-gray-background h1{
+    color: white;
+    border: solid rgb(255, 255, 255) 0.8rem;
+}
+
+.title{
+    border: solid black 0.8rem;
+    padding: 2rem 7rem 2rem 7rem;
+    letter-spacing: 0.7rem;
+    font-size: 2.5rem;
+    margin-top: 3rem;
+}
+
+.header-backgroud{
+    background-color: #ffffff;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: white;
+    border-bottom: 0.1rem solid;
+    border-color: #c3c3c3;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .nav-header{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    color: white;
-    height: 10%;
-    background-color: #000000;
-    opacity: 80%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.nav-header .options-nav-header{
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 550px;
-    padding: 25px;
 }
 
-.nav-header .options-nav-header .change-page{
-    color: #000000;
-    border: none;
-    background-color: #ffffff;
-    border-radius: 100px;
-    font-size: 15px;
-    padding: 10px 20px 10px 20px;
+.nav-header ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: end;
+}
+
+.nav-header ul li a{
     text-decoration: none;
-    font-family: "Raleway", sans-serif;
-    font-style: bold;
+    color: #000000;
+    font-size: 1.8rem;
+    display: block; /*Dessa forma o espaço do botão fica maior*/
+    padding: 3rem;
+    position: relative;
+}
+
+.nav-header ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: #000000;
+    transition: all 300ms ease-in-out;
+
+}
+
+.nav-header ul li a:hover::after{
+    width: 50%;
+    left: 25%;
+}
+
+.nav-header ul li a:hover{
+    background: #c3c3c3;
+    transition: all 500ms;
+}
+
+.menu-spacing{
+    height: 8.5rem;
+}
+
+.container-page{
+    width: 100%;
+    height: calc(100vh - 8rem);
 }
 
 .home-page{
-    background-image: url("/assets/img/fundo.png");
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-.home-page .container{
     display: flex;
-    height: 100%;
+    justify-content: space-around;
 }
 
-.home-page .container .div1{
+.home-page .content1{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 100%;
+    margin-top: 12rem;
 }
 
-.home-page .container .div1 #main-text1{
-    padding-top: 100px;
-    font-size: 30px;
-    font-family: "Raleway", sans-serif;
-    font-style: bold;
+.home-page .main-text h1{
+    font-size: 5rem;
 }
 
-.home-page .container .div1 #main-text2{
-    font-size: 50px;
-    font-family: "Raleway", sans-serif;
-}
-
-
-.home-page .container .div1 .box{
+.home-page .main-text .subtitle{
+    font-size: 3rem;
     display: flex;
-    align-items: end;
     justify-content: center;
-    height: 200px;
 }
 
-.home-page .container .div1 .box .links{
-    display: flex;
-    width: 120px;
-    justify-content: space-between;
+.home-page .content1 .profile-links{
+    margin-top: 20rem;
+    display:flex;
+    justify-content: center;
+    gap: 3rem;
 }
 
-.home-page .container .div2{
+.home-page .content2{
     display: flex;
-    width: 100%;
+    justify-content: center;
     align-items: end;
-    padding-left: 200px;
+}
+
+.home-page .content2 img{
+    max-width: 60%;
+    height: auto;
 }
 
 .about-me-page{
-    background: radial-gradient(circle, #f7f7f7, #d7d7d7);;
     width: 100%;
-    height: 100vh;
-}
-
-.about-me-page .div1{
-    display: flex;
-    height: 45%;
-    align-items: center;
-    padding-top: 100px;
-    padding-left: 150px;
-    padding-right: 150px;
+    display:flex;
     flex-direction: column;
-    justify-content: space-around;
-}
-
-.about-me-page .div2{
-    display: flex;
-    height: 10%;
-    justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
 }
 
-.about-me-page .div3{
-    height: 45%;
-    display: flex;
+.about-me-page .separador{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
 
-    justify-content: space-around;
+.about-me-page .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80rem;
 }
 
 .about-me-page p{
-    font-family: "Raleway", sans-serif;
-    font-style: bold;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.about-me-page .text{
+    text-align: center;
+}
+
+.about-me-page .div-text{
+    display: flex;
+    text-align: center;
+    gap: 5rem;
 }
 
 .skills-page{
-    background: radial-gradient(circle, #f7f7f7, #d7d7d7);
+    display: flex;
     width: 100%;
-    height: 100vh;
-}
-
-.skills-page .div1{
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-.skills-page .div2{
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 70%;
 }
 
-.skills-page .div2 .wrapper{
+.skills-page .separador{
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+}
+
+.grid-skills{
     display: grid;
-    grid-template-columns: 50px 50px 50px;
-    grid-template-rows: 50px 50px 50px;
-    column-gap: 200px;
-    row-gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8rem;
 }
 
 .contact-page{
-    background-color: #1A1A1A;
+    display: flex;
     width: 100%;
-    height: 100vh;
-}
-
-.contact-page .div1{
-    height: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-.contact-page .div2{
-    height: 70%;
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.contact-page .div2 form input{
-    margin: 20px;
-    width: 500px;
-    height: 50px;
-    font-size: 15px;
+.contact-page .separador{
+    filter: invert(1);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.contact-page form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-page form input{
+    margin-bottom: 4rem;
+    width: 50rem;
+    height: 5rem;
+    font-size: 1.8rem;
     color: #ffffff;
     background: none;
     border-style: none none solid solid;
-    border-color: #ff0000 #ff0000 #ffffff #ffffff;
-    padding-left: 10px;
+    border-color: #ffffff;
+    padding-left: 1rem;
     border-width: 5px;
     outline: none;
 }
 
-.contact-page .div2 form input:hover{
+.button-submit {
+  background: #fff;
+  font-size: 1.8rem;
+  width: 25rem;
+  height: 5rem;
+  backface-visibility: hidden;
+  border-radius: .375rem;
+  border-style: solid;
+  border-width: .125rem;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-submit:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.button-submit:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+.button-submit:focus {
+  outline: 0 solid transparent;
+}
+
+.button-submit:focus:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.button-submit:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+.button-submit:focus:not(:focus-visible):before {
+  border-width: 0;
+}
+
+.button-submit:not(:disabled):active {
+  transform: translateY(.125rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-page form input:hover{
     background-color: #ffffff;
     color: #000000;
+    transition: all 500ms;
 
 }
 
-.contact-page .div2 form input::placeholder {
+.contact-page form input::placeholder {
   color: rgb(255, 255, 255);
   opacity: 100%;
 }
 
-.contact-page .div2 form input:hover::placeholder{
+.contact-page form input:hover::placeholder{
   color: rgb(0, 0, 0);
   opacity: 100%;
 }
